@@ -28,14 +28,15 @@ dataBinding {<br/>
 android:text="@{express.number}"
 ### 3. Activity中操作
 在activity中加入如下代码，相当于setContentView(R.layout.activity_main)这个操作;
-
 //ActivityMainBinding是由databinding根据当前xml命名方式生成，activity_main名字改变，ActivityMainBinding也随之改变
+```
 ActivityMainBinding binding = DataBindingUtil.setContentView(MainActivity.this,R.layout.activity_main);
-
+```
 在自定义的Adapter中获取item布局的binding <Br/>
+```
                 binding = DataBindingUtil.inflate(LayoutInflater.from(MainActivity.this),
                         R.layout.list_item, parent, false);
-
+```
 设置ListView的适配器，list是xml中的id 
 
 binding.list.setAdapter(new MyAdapter());
