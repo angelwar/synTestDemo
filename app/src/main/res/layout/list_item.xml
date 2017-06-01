@@ -1,45 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
+
+        <import type="syn.databingdemo.R"/>
+
         <variable
             name="express"
             type="syn.databingdemo.Express">
         </variable>
+
+
     </data>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="38dp"
-    android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tv_number_item"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="@{express.number}"
-        android:textSize="14sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tv_time_item"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="@{express.time}"
-        android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_number_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@{express.number}"
+            android:textSize="14sp"/>
 
-    <TextView
-        android:id="@+id/tv_state_item"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="@{express.state}"
-        android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_time_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@{express.time}"
+            android:textSize="14sp"/>
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tv_state_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@{express.state}"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:defaultRes="@{@drawable/b4}"
+            app:image="@{express.image}"
+            app:integerRes="@{R.drawable.b5}"/>
+    </LinearLayout>
 </layout>
